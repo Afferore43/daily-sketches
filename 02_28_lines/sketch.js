@@ -4,6 +4,7 @@ let speed = 10;
 function setup() {
     createCanvas(windowWidth - 20, windowHeight - 20);
     
+    smooth();
     let x = random(width);
     let y = random(height);
     
@@ -64,7 +65,7 @@ function draw() {
             lines.push(new Line(lines[r].randomPointOnLine()));
         }
     }   
-    if(speed < 300) speed *= 1.005;
+    if(speed < 100) speed *= 1.005;
 }
 
 function getLineIntersection(p0_x, p0_y, p1_x, p1_y, p2_x, p2_y, p3_x, p3_y) {
